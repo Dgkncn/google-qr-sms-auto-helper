@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives & build artifacts
+*.zip
+*.crx
+*.pem
+
+# Editor directories
+.vscode/
+.idea/

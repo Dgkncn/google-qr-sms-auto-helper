@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Google 一键自动降级短信助手 (Auto Cloud Shell -> SMS)",
+  "version": "2.0.0",
+  "description": "点击插件图标即刻自动导航至 Google Cloud Console、自动触发 Cloud Shell Verify、自动识别二维码并注入 [3,null,4] 弹出短信手机号输入框",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://accounts.google.com/*",
+    "https://console.cloud.google.com/*",
+    "https://g.co/*"
+  ],
+  "action": {
+    "default_title": "⚡ 点击一键自动跳转 Console 并弹出短信验证框"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://accounts.google.com/*"
+      ],
+      "js": ["ua_spoof.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://accounts.google.com/*",
+        "https://console.cloud.google.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
