@@ -111,4 +111,6 @@ google-qr-sms-auto/
 ## 📄 五、开源协议 (License)
 
 本项目基于 [MIT License](./LICENSE) 开源，保留原项目 [havenicec/google-qr-sms-helper](https://github.com/havenicec/google-qr-sms-helper) 的 MIT 版权声明。
+
+
 友情链接：LinuxDo 开源社区(https://linux.do/)
