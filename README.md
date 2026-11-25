@@ -114,3 +114,6 @@ google-qr-sms-auto/
 
 
 友情链接：LinuxDo 开源社区(https://linux.do/)
+
+
+有任何问题联系推特：https://x.com/zixunclub
